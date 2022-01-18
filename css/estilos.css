@@ -1,0 +1,456 @@
+/* UNIVERSAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/20689-plateados.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Grid */
+
+.grill {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr auto;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header "
+    "section1 section1 "
+    "section2 section2 "
+    "section3 section4 "
+    "footer footer ";
+}
+
+.grill1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header "
+    "section1 section1"
+    "section2 section3 "
+    "section4 section5 "
+    "footer footer ";
+}
+
+.grill2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header "
+    "section1 section1 "
+    "section2 section2"
+    "footer footer ";
+}
+
+/* HEADER */
+
+.header {
+  grid-area: header;
+  height: 33vh;
+  background-image: linear-gradient(white, grey, black);
+  display: flex;
+}
+
+.logo {
+  height: 150px;
+  width: 150px;
+}
+
+/* Nav */
+
+.nav {
+  grid-area: nav;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.padreFlex {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  list-style: none;
+  align-items: stretch;
+}
+
+.hijoFlex {
+  background-color: #6c757d;
+}
+
+.hijoFlex:hover {
+  color: white;
+  background-color: #29aeb3;
+}
+
+.fuente {
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.negrita {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Submenu */
+
+.submenu {
+  position: relative;
+  z-index: 1;
+}
+
+ul ul {
+  position: absolute;
+  width: 100%;
+  top: 2rem;
+  left: 1rem;
+  display: none;
+}
+
+ul ul li {
+  display: block;
+}
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  border-radius: 0;
+  padding: 1em 1.25em;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  color: white;
+  background-color: #29aeb3;
+  font-weight: bold;
+  padding: 10px;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+/* bootstrap */
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 0rem 0rem;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+/* Main */
+
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+/* Tabla Servicios */
+.tabla {
+  height: 50rem;
+  width: 50rem;
+  background-image: linear-gradient(grey, #29aeb3);
+  color: white;
+  padding: 5px 2.5px 5px 2.5px;
+  margin: 50px auto;
+  border-radius: 25px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+/* Section*/
+.section1 {
+  grid-area: section1;
+}
+
+.section2 {
+  grid-area: section2;
+}
+
+.section3 {
+  grid-area: section3;
+}
+
+.section4 {
+  grid-area: section4;
+}
+
+.letraGrande {
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: 90%;
+  margin: 2.5rem auto;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.banner {
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 2rem;
+  width: 85%;
+  margin: 2rem auto;
+  border-bottom: groove;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin: 2.5rem auto;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.text1 {
+  background-color: #29aeb3;
+  color: black;
+  font-size: 2.5rem;
+  letter-spacing: 0.2;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  animation: text 5s 1;
+}
+
+.title-container {
+  height: 30vh;
+}
+
+.text-container {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textoResaltado {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+@keyframes text {
+  0% {
+    color: black;
+    margin-bottom: -40px;
+  }
+
+  30% {
+    letter-spacing: 1.5rem;
+    margin-bottom: -40px;
+  }
+}
+
+h2 {
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin: 2.5rem auto;
+}
+
+h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  color: black;
+  width: 80%;
+  text-align: justify;
+}
+
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  color: black;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/* imagenes */
+
+.container__img {
+  width: 100%;
+  margin: 0.5rem;
+  box-shadow: 3px 3px 3px rgb(56, 55, 55);
+}
+
+.formContainer__title {
+  color: black;
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.form {
+  text-align: center;
+}
+
+.form__label {
+  color: black;
+  font-weight: 600;
+  text-align: left;
+  display: inline-block;
+  width: 60%;
+}
+
+.form__input,
+.form__textarea {
+  width: 60%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  border: none;
+  border-bottom: solid 1px #39d3d8;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.form__textarea {
+  height: 5rem;
+  resize: none;
+}
+
+.form__input:focus,
+.form__textarea {
+  outline: none;
+}
+
+.form__input--submit {
+  background-color: #39d3d8;
+  margin-top: 1.5rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form__input--submit:hover {
+  background-color: #29aeb3;
+}
+
+/* FOOTER */
+.footer {
+  grid-area: footer;
+  background-color: black;
+  display: grid;
+  color: white;
+  font-size: 1.25rem;
+  align-content: stretch;
+  justify-items: center;
+  height: 15vh;
+  width: auto;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-whatsapp:hover {
+  background-color: #18a32b;
+  font-size: 3.5regit remoem;
+  transition: 1s;
+}
+
+.fa-whatsapp {
+  color: white;
+  font-size: 3rem;
+  background-color: #3ec34f;
+  padding: 0.6rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 350px) {
+  .header {
+    height: 55vh;
+  }
+  .grill {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr auto;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header "
+      "section1 "
+      "section2 "
+      "section3 "
+      "section4 "
+      "footer ";
+  }
+  .grill1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr auto;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header "
+      "section1 "
+      "section2 "
+      "section3 "
+      "section4 "
+      "section5 "
+      "footer ";
+  }
+}
+
+  
