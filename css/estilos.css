@@ -59,8 +59,7 @@ body {
 .header {
   grid-area: header;
   height: 33vh;
-  background-image: linear-gradient(white, grey, black);
-  display: flex;
+  background-image: linear-gradient(grey, black);
 }
 
 .logo {
@@ -111,12 +110,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Submenu */
-
-.submenu {
-  position: relative;
-  z-index: 1;
-}
+/* menu */
 
 ul ul {
   position: absolute;
@@ -153,30 +147,18 @@ ul li:hover ul {
   display: block;
 }
 
-/* bootstrap */
-
-.dropdown-menu {
-  position: absolute;
-  z-index: 1000;
-  display: none;
-  min-width: 10rem;
-  padding: 0rem 0rem;
-  margin: 0;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-}
-
 /* Main */
 
 .video {
   display: flex;
   justify-content: center;
+}
+
+.fotos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* Tabla Servicios */
@@ -262,6 +244,7 @@ h1 {
   font-weight: bold;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   animation: text 5s 1;
+  align-items: center;
 }
 
 .title-container {
@@ -326,9 +309,8 @@ p {
 /* imagenes */
 
 .container__img {
-  width: 100%;
+  width: 95%;
   margin: 0.5rem;
-  box-shadow: 3px 3px 3px rgb(56, 55, 55);
 }
 
 .formContainer__title {
@@ -416,11 +398,11 @@ p {
   padding: 0.6rem;
   border-radius: 50%;
   position: fixed;
-  bottom: 5%;
-  right: 3%;
+  bottom: 5rem;
+  right: 2rem;
 }
 
-@media only screen and (max-width: 992px) and (min-width: 350px) {
+@media only screen and (max-width: 992px) and (min-width: 200px) {
   .header {
     height: 55vh;
   }
