@@ -54,6 +54,23 @@ body {
     "footer footer ";
 }
 
+.grill3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "section1 section1"
+    "section2 section3"
+    "section4 section5"
+    "section6 section7"
+    "section8 section9"
+    "footer footer";
+}
+
+
 /* HEADER */
 
 .header {
@@ -129,18 +146,19 @@ nav ul li a {
   text-decoration: none;
   color: white;
   position: relative;
+  background-color: rgb(37, 58, 58);
   border-radius: 0;
   padding: 1em 1.25em;
   font-size: 1em;
   font-weight: 600;
   transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  z-index: 1;
 }
 
 nav ul li a:hover {
   color: white;
   background-color: #29aeb3;
   font-weight: bold;
-  padding: 10px;
 }
 
 ul li:hover ul {
@@ -159,6 +177,8 @@ ul li:hover ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
+  margin: 0.5rem; 
 }
 
 /* Tabla Servicios */
@@ -309,7 +329,7 @@ p {
 /* imagenes */
 
 .container__img {
-  width: 95%;
+  width: 100%;
   margin: 0.5rem;
 }
 
@@ -402,37 +422,3 @@ p {
   right: 2rem;
 }
 
-@media only screen and (max-width: 992px) and (min-width: 200px) {
-  .header {
-    height: 55vh;
-  }
-  .grill {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr auto;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header "
-      "section1 "
-      "section2 "
-      "section3 "
-      "section4 "
-      "footer ";
-  }
-  .grill1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr auto;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header "
-      "section1 "
-      "section2 "
-      "section3 "
-      "section4 "
-      "section5 "
-      "footer ";
-  }
-}
-
-  
