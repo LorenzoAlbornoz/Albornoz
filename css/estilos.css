@@ -17,13 +17,15 @@ body {
 .grill {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr auto;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr auto;
   grid-auto-flow: row;
   grid-template-areas:
     "header header "
     "section1 section1 "
     "section2 section2 "
-    "section3 section4 "
+    "section3 section3 "
+    "section4 section4"
+    "section5 section5"
     "footer footer ";
 }
 
@@ -34,11 +36,13 @@ body {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "header header "
-    "section1 section1"
-    "section2 section3 "
-    "section4 section5 "
-    "footer footer ";
+  "header header"
+  "section1 section1"
+  "section2 section2"
+  "section3 section3" 
+  "section4 section4"
+  "section5 section5"
+  "footer footer";
 }
 
 .grill2 {
@@ -89,23 +93,6 @@ body {
   font-family: monospace;
 }
 
-.padreFlex {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  list-style: none;
-  align-items: stretch;
-}
-
-.hijoFlex {
-  background-color: #6c757d;
-}
-
-.hijoFlex:hover {
-  color: white;
-  background-color: #29aeb3;
-}
-
 .fuente {
   color: black;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -149,7 +136,7 @@ nav ul li a {
   font-size: 1em;
   font-weight: 600;
   transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-  z-index: 1;
+  z-index: 100;
 }
 
 nav ul li a:hover {
@@ -179,16 +166,8 @@ ul li:hover ul {
 
 /* Tabla Servicios */
 .tabla {
-  height: 50rem;
-  width: 50rem;
-  background-image: linear-gradient(grey, #29aeb3);
-  color: white;
-  padding: 5px 2.5px 5px 2.5px;
-  margin: 50px auto;
   border-radius: 25px;
-  border-collapse: collapse;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
 }
 
 .formulario {
@@ -196,6 +175,12 @@ ul li:hover ul {
   flex-direction: column;
   align-items: center;
   font-size: 1.25rem;
+}
+
+/* Carrusel */
+
+.carousel-inner{
+  margin-bottom: 2.5rem;
 }
 
 /* Section*/
@@ -390,7 +375,6 @@ p {
   font-size: 1.25rem;
   align-content: stretch;
   justify-items: center;
-  height: 15vh;
   width: auto;
 }
 
@@ -417,4 +401,3 @@ p {
   bottom: 5rem;
   right: 2rem;
 }
-
